@@ -1,0 +1,23 @@
+# Environment variables
+.env
+.env.*
+
+# Configuration files
+repos.py
+
+# Python virtual environment
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+ENV/
+
+# Poetry
+dist/
+*.egg-info/
+poetry.lock
+
+# OS files
+.DS_Store
