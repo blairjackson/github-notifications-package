@@ -60,8 +60,9 @@ def check_mentions(repo):
     response = requests.get(url, headers=headers)
 
     if response.status_code != 200:
-        return
+        return False
 
+    found_mentions = False
     items = response.json().get('items', [])
     for item in items:
         updated_at = datetime.strptime(item['updated_at'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
@@ -69,6 +70,8 @@ def check_mentions(repo):
             print(f"\n@ Mentioned in: {repo}")
             print(f"Title: {item['title']}")
             print(f"URL: {item['html_url']}")
+            found_mentions = True
+    return found_mentions
 
 
 def main():
