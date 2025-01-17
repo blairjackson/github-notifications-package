@@ -15,11 +15,11 @@ GITGITHUB_USERNAME=your_username
 
 3. **Configure Repositories**
 - Open `repos.py`
-- Uncomment the repositories you want to monitor
+- Add the repositories you want to monitor
 
 This will show:
 - PRs where you're requested as a reviewer (excluding approved PRs)
 - Recent mentions in issues/PRs
 - "All clear" message if nothing needs attention
 
-NOTE: There are API limits to GitHub so only uncomment the required repos
+NOTE: There are API limits to GitHub so only add repos you care about
